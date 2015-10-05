@@ -1,316 +1,40 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Raymondanthony.github.io by raymondanthony</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Roboto|Fira+Sans&effect=3d|fire|fire-animation' rel='stylesheet' type='text/css'>
- <style>
-body,html{
-top: 0; left: 0; bottom: 0; right: 0;
-background-color:#0b60e0;
-background-color:#262;
-
-color #eee;
-}
-.Center-Container {
-  position: relative;
-}
-
-.Absolute-Center {
-  width: 100%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-}
-.wrap{
-    margin:auto;
-    }
-.header{
-    width:100%;
-    height:50%;
-    background-color:#666;
-margin:auto;
-}
-p{
-    font-family:'Roboto', sans;
-}
-.biglogo{
-font-size:4rem;
-font-family:'Fira Sans', sans-serif;
-
-font-weight: 400;
-text-align: center;  
-min-width:100%;
-padding:3rem;
-  height:50%;
-  margin:auto;
-    background-color:rgba(8,8,8,0.5);
-line-height: 3rem;
-text-align:center;
-color: undefined;
-font-size:14rem;
-text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(191,191,191),2px 2px 0 rgb(179,179,179),3px 3px 0 rgb(168,168,168),4px 4px 0 rgb(156,156,156),5px 5px 0 rgb(145,145,145),6px 6px 0 rgb(133,133,133),7px 7px 0 rgb(122,122,122),8px 8px 0 rgb(110,110,110),9px 9px 0 rgb(99,99,99),10px 10px 0 rgb(87,87,87), 11px 11px 0 rgb(75,75,75),12px 12px 11px rgba(0,0,0,1),12px 12px 1px rgba(0,0,0,0.5),0px 0px 11px rgba(0,0,0,.2;);
-/*color:#f6007b;*/
-color:#eee;
-z-index :2;
-
-}
- 
-
-        .vertex, .face, .assembly {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform-style: preserve-3d;
-            -moz-transform-style: preserve-3d;
-            -ms-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-        }
-        .face {
-          /*  background-color: rgba(50, 40, 60, .35); */
-            background-color:rgba(255,255,255,0.6);
-        }
-
-       .vertex {
-            width: 10px;
-            height: 10px;
-            margin: -5px;
-            background: rgba(0, 0, 0, .0);
-            border-radius:15px;
-            color:rgba(0,0,0,0.1);
-            font: 12px / 1 "Courier New", monospace;
-            text-indent: 14px;
-            white-space: nowrap;
-        }
-
-       #scene {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            -webkit-perspective: 400px;
-            -moz-perspective: 400px;
-            -ms-perspective: 400px;
-            perspective: 400px;
-            -webkit-transform-style: preserve-3d;
-            -moz-transform-style: preserve-3d;
-            -ms-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-        }
-        .cube {
-            -webkit-animation: spin 20s linear infinite;
-            -moz-animation: spin 20s linear infinite;
-            -ms-animation: spin 20s linear infinite;
-            animation: spin 20s linear infinite;
-        }
-        .cube .face {
-            /*200x200x1100 */
-            width: 220px;
-            height: 220px;
-            margin: -110px;
-        }
-        .cube .face:nth-child(1) {
-            -webkit-transform: translateZ(200px);
-            -moz-transform: translateZ(200px);
-            -ms-transform: translateZ(200px);
-            transform: translateZ(200px);
-        }
-        .cube .face:nth-child(2) {
-            -webkit-transform: translateZ(-200px) rotateY(180deg);
-            -moz-transform: translateZ(-200px) rotateY(180deg);
-            -ms-transform: translateZ(-200px) rotateY(180deg);
-            transform: translateZ(-200px) rotateY(180deg);
-        }
-        .cube .face:nth-child(3) {
-            -webkit-transform: translateX(-200px) rotateY(-90deg);
-            -moz-transform: translateX(-200px) rotateY(-90deg);
-            -ms-transform: translateX(-200px) rotateY(-90deg);
-            transform: translateX(-200px) rotateY(-90deg);
-        }
-        .cube .face:nth-child(4) {
-            -webkit-transform: translateX(200px) rotateY(90deg);
-            -moz-transform: translateX(200px) rotateY(90deg);
-            -ms-transform: translateX(200px) rotateY(90deg);
-            transform: translateX(200px) rotateY(90deg);
-        }
-        .cube .face:nth-child(5) {
-            -webkit-transform: translateY(200px) rotateX(-90deg);
-            -moz-transform: translateY(200px) rotateX(-90deg);
-            -ms-transform: translateY(200px) rotateX(-90deg);
-            transform: translateY(200px) rotateX(-90deg);
-        }
-        .cube .face:nth-child(6) {
-            -webkit-transform: translateY(-200px) rotateX(90deg);
-            -moz-transform: translateY(-200px) rotateX(90deg);
-            -ms-transform: translateY(-200px) rotateX(90deg);
-            transform: translateY(-200px) rotateX(90deg);
-        }
-        @-webkit-keyframes spin {
-            to {
-                -webkit-transform: rotateX(360deg) rotateY(1080deg) rotateZ(720deg);
-            }
-        }
-        @-moz-keyframes spin {
-            to {
-                -moz-transform: rotateX(360deg) rotateY(1080deg) rotateZ(720deg);
-            }
-        }
-        @keyframes spin {
-            to {
-                transform: rotateX(360deg) rotateY(1080deg) rotateZ(720deg);
-            }
-        }
-        
-        
-            
- </style>  
- 
-    <script>
-   var canvas = document.getElementById('canvas');
-   context = canvas.getContext('2d');
-   var x = 72;
-   var y = 163;
-   context.font = 'bold 143px Roboto, sans-serif';
-   context.fillStyle = '#262624' ;
-   context.strokeStyle = '#242321';
-   context.lineWidth = 3.2;
-   context.fillText( 'HTML',  x, y);
-   context.strokeText( 'HTML',  x, y);
-</script>
-
+    <meta charset="UTF-8">
+    <title>raymond anthony by raymondanthony</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/raymondanthony">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
- <div class="row Absolute-Center">     
- <div class="wrap Container-Center">
- <div class="header">
-      <h2><p class="biglogo font-effect-3d">Ray Anthony</p></h2>
-   </div>
- </div>
-</div>
+    <section class="page-header">
+      <h1 class="project-name">raymond anthony</h1>
+      <h2 class="project-tagline"></h2>
+    </section>
 
-    <div id="scene">
-        <div id="cube" class="assembly cube">
-            <div id="face" class="face"></div>
-            <div id="face" class="face"></div>
-            <div id="face" class="face"></div>
-            <div id="face" class="face"></div>
-            <div id="face" class="face"></div>
-            <div id="face" class="face"></div>
-        </div>
-    </div>
+    <section class="main-content">
+      <p>migrating </p>
 
+<hr>
 
+<p><a href="https://github.com/raymondanthony/raymondanthony.github.io/generated_pages/new#">https://github.com/raymondanthony/raymondanthony.github.io/generated_pages/new#</a></p>
 
+<hr>
 
-<script src="http://keithclark.co.uk/articles/calculating-element-vertex-data-from-css-transforms/js.js"></script> 
-    <script>
+<p><a href="https://github.com/raymondanthony/raymondanthony.github.io/generated_pages/new#">https://github.com/raymondanthony/raymondanthony.github.io/generated_pages/new#</a></p>
 
-        // shim requestAnimationFrame
-        window.requestAnimationFrame =
-            window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            function(f) { setTimeout(f, 1000/60); };
+<p><code>#!/</code></p>
 
+      <footer class="site-footer">
 
-        // Select the faces
-        var faces = [].slice.call(document.querySelectorAll(".face"));
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
+    </section>
 
-        /* Loop
-        ---------------------------------------------------------------- */
-
-        function loop() {
-
-            // shedule the next update
-            requestAnimationFrame(loop);
-
-            faces.forEach(function (face, i) {
-                // Extract the elements transform
-                var vertexData = computeVertexData(face);
-
-                // Draw the vertices 
-                renderVertex("a", face, vertexData.a);
-                renderVertex("b", face, vertexData.b);
-                renderVertex("c", face, vertexData.c);
-                renderVertex("d", face, vertexData.d);
-            });
-        }      
-
-        // start the loop
-        loop();
-
-
-        /* Renders a vertex to the DOM
-        ---------------------------------------------------------------- */
-
-        function renderVertex (id, face, vertex) {
-            var id = "_vertex_" + id,
-                vertexElem = face[id],
-                x = vertex.x.toFixed(2),
-                y = vertex.y.toFixed(2),
-                z = vertex.z.toFixed(2),
-                s = 1 - vertex.z / 400; // scale to keep the text readable
-
-            if (!vertexElem) {
-                vertexElem = face[id] = document.createElement("div");
-                vertexElem.className = "vertex";
-                document.getElementById("scene").appendChild(vertexElem);
-            }
-
-            // show the vertex coordinates
-            vertexElem.textContent = "x:" + x + " y:" + y + " z:" + z;
-            
-            // apply the tralsation to the vertex
-            vertexElem.style.cssText = 
-                "-webkit-transform: translate3d(" + x + "px," + y + "px," + z + "px) scale(" + s + ");" +
-                "-moz-transform: translate3d(" + x + "px," + y + "px," + z + "px) scale(" + s + ");" +
-                "-ms-transform: translate3d(" + x + "px," + y + "px," + z + "px) scale(" + s + ");" +
-                "transform: translate3d(" + x + "px," + y + "px," + z + "px) scale(" + s + ");";
-        }
-
-    </script>
-    
-    
-<div class="container">
-<div class="wrap" style="height:90px;color:#777;background-color:rgba(0,0,0,0.1);text-align:center;margin-bottom:-20px;border-top:1px solid #e5e5e5;vertical-align:bottom;">
-    <span style="left:0;padding:10px;font-weight:400;font-family:'Roboto' sans;text-align:center;font-color:#fff;z-index:1;">
-           <iframe allowtransparency="true" frameborder="0" scrolling="no"
-            src="//platform.twitter.com/widgets/follow_button.html?screen_name=rayanthonyrcc"
-            style="width:236px; height:20px;" class="logo "></iframe>
-            <p style="font-size:small;font-weight:400;font-family:'Roboto' sans;text-align:center;font-color:#fff;z-index:1;">
-            Made with ♡ by <abbr title="made with love by ray"><a href="http://rayanthony.io/" title="http://rayanthony.io">Ray</a>  © 2014 </abbr> 
-            <abbr>crafted <a href="http://codepen.io/rayrc/feed/">@ codepen.io</a></abbr>
-            <abbr>and <a href="http://github.com/raymondanthony/">Github</a></abbr>
-            <abbr>spring served by <a href="http://statspring.com/?"> stat<i>SPRING</i>.com</a></abbr></p>
-    </span>
-  </div>
-</div>
-
-
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  
   </body>
 </html>
